@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <p>{{counter}} times.</p>
+    <!-- <form method="post"> -->
+    <button class="btn btn-primary btn-lg btn-block" type="submit"
+        onclick="window.location.href='{{ url_for( 'session_counter', no=2) }}';">Increment by 2</button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit"
+        onclick="window.location.href='{{ url_for( 'destroy_session') }}';">Reset Counter</button>
+    <!-- </form> -->
+</body>
+
+</html>
